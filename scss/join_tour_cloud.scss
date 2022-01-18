@@ -1,0 +1,79 @@
+@import './mixin.scss';
+
+.join_tour_cloud{
+    margin: 30px 250px;
+    .content{
+        @include flex(space-around, center);
+        form, section{
+            flex: 1;
+            @include flex(center, flex-start, column);
+        }
+        form{
+            input{
+                padding: 10px;
+                width: 70%;
+                margin: 10px 0;
+                font-size: 14px;
+                font-weight: 400;
+            }
+            .conditions_check{
+                position: relative;
+                margin: 20px 0;
+                font-size: 11px;
+                font-weight: 400;
+                input{
+                    position: absolute;
+                    left: -30px;
+                    top: 0px;
+                    width: 20px;
+                    height: 20px;
+                    padding: 0px;
+                    margin: 0px;
+                }
+            }
+            button{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1800px) {
+    .join_tour_cloud{
+        margin: 30px 100px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .join_tour_cloud{
+        margin: 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .join_tour_cloud{
+        .content{
+            flex-direction: column;
+            form{
+                input{
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .join_tour_cloud{
+        margin: 50px 30px;
+        .content{
+            img{
+                width: 80vw;
+            }
+            form .conditions_check {
+                margin: 20px;
+            }
+
+        }
+    }
+}

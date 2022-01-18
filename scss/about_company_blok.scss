@@ -1,0 +1,189 @@
+@import './mixin.scss';
+
+ul.about_company{
+    margin: 30px 250px;
+    @include flex(center, center, column);
+    .title{
+        margin-top: 30px;
+    }
+    li{
+        @include flex(space-around, center);
+        margin: 50px 0;
+        .text_blok{
+            margin: 0 25px;
+        }
+        div, ul{
+            flex: 1;
+        }
+        ul.advantage{
+            @include flex(flex-start, flex-start, column);
+            li{
+                margin: 20px 0;
+                .text{
+                    margin-left: 25px;
+                }
+                img{
+                    width: 50px;
+                }
+            }
+        }
+        .video{
+            @include flex(flex-start, center, column);
+            position: relative;
+            iframe, .background_blok{
+                width: 595px;
+                height: 335px;
+                border-radius: 10px;
+            }
+            .background_blok{
+                position: absolute;
+                top: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(112, 112, 97, 0.95);
+                transition: 0.5s;
+                .play{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 100%;
+                    background: white;
+                    cursor: pointer;
+                    transition: 0.2s;
+                }
+                .play:hover{
+                    width: 70px;
+                    height: 70px;
+                    padding: 5px;
+                }
+                .play.opacity{
+                    opacity: 0;
+                }
+            }
+            .background_blok.opacity{
+                opacity: 0;
+            }
+            button{
+                margin-top: 30px;
+            }
+        }
+        p{
+            margin-top: 10px;
+        }
+        img{
+            width: 30vw;
+        }
+    }
+}
+
+@media (max-width: 1800px) {
+    ul.about_company{
+        margin: 30px 100px;
+    }
+}
+
+@media (max-width: 1550px) {
+    ul.about_company li {
+        .video{
+            iframe, .background_blok{
+                width: 495px;
+                height: 275px;
+            }
+        }
+        li{
+            margin: 15px 0;
+            img{
+                width: 35px;
+            }
+        }
+        p{
+            margin-top: 7px;
+        }
+        
+    }
+}
+
+@media (max-width: 1250px) {
+    ul.about_company{
+        margin: 30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    ul.about_company .title{
+        margin-top: 0px;
+    }
+    ul.about_company li{
+        flex-direction: column;
+        text-align: center;
+        margin: 40px 0;
+        .video{
+            iframe, .background_blok{
+                width: 595px;
+                height: 335px;
+            }
+        }
+        img{
+            margin-bottom: 30px;
+        }
+        ul.advantage{
+            @include flex(center, center, column);
+            margin-top: 30px;
+            li{
+                flex-direction: row;
+                align-items: flex-start;
+                text-align: start;
+                width: 80%;
+                .text{
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    .about_company li.reverse{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 700px) {
+    ul.about_company li{
+        margin: 30px 0;
+        .video{
+            iframe, .background_blok{
+                width: 80vw;
+                height: 215px;
+            }
+        }
+        img{
+            width: 80vw;
+        }
+        ul.advantage li{
+                width: 80%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    ul.about_company{
+        margin: 30px;
+        li{
+            .video{
+                iframe, .background_blok{
+                    width: calc(100vw - 60px);
+                }
+            }
+            img{
+                width: calc(100vw - 60px);
+            }
+            ul.advantage li{
+                    width: 100%;
+                    img{
+                        width: 25px;
+                    }
+            }
+        }
+    }
+}

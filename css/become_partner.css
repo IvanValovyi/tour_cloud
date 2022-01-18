@@ -1,0 +1,37 @@
+.become_partner {
+  background: linear-gradient(94.35deg, #009DDC 17.13%, #008AC2 82.87%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  color: white;
+  border-radius: 0 0 5px 5px;
+}
+.become_partner p {
+  margin: 30px 0;
+}
+.become_partner img {
+  width: 30vw;
+}
+
+@media (max-width: 1100px) {
+  .become_partner {
+    flex-direction: column;
+  }
+  .become_partner .text_blok {
+    margin-bottom: 20px;
+  }
+  .become_partner img {
+    width: 45vw;
+  }
+}
+@media (max-width: 700px) {
+  .become_partner {
+    padding: 15px 25px;
+  }
+  .become_partner img {
+    width: calc(100vw - 50px);
+  }
+}
+
+/*# sourceMappingURL=become_partner.css.map */

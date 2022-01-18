@@ -1,0 +1,73 @@
+.join_tour_cloud {
+  margin: 30px 250px;
+}
+.join_tour_cloud .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.join_tour_cloud .content form, .join_tour_cloud .content section {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.join_tour_cloud .content form input {
+  padding: 10px;
+  width: 70%;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+.join_tour_cloud .content form .conditions_check {
+  position: relative;
+  margin: 20px 0;
+  font-size: 11px;
+  font-weight: 400;
+}
+.join_tour_cloud .content form .conditions_check input {
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+.join_tour_cloud .content form button {
+  margin-top: 10px;
+}
+
+@media (max-width: 1800px) {
+  .join_tour_cloud {
+    margin: 30px 100px;
+  }
+}
+@media (max-width: 1250px) {
+  .join_tour_cloud {
+    margin: 50px;
+  }
+}
+@media (max-width: 1100px) {
+  .join_tour_cloud .content {
+    flex-direction: column;
+  }
+  .join_tour_cloud .content form input {
+    width: calc(100% - 20px);
+  }
+}
+@media (max-width: 700px) {
+  .join_tour_cloud {
+    margin: 50px 30px;
+  }
+  .join_tour_cloud .content img {
+    width: 80vw;
+  }
+  .join_tour_cloud .content form .conditions_check {
+    margin: 20px;
+  }
+}
+
+/*# sourceMappingURL=join_tour_cloud.css.map */

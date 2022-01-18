@@ -1,0 +1,17 @@
+.about_text_blok {
+  text-align: start;
+  margin: 0 100px;
+  margin-top: 30px;
+}
+.about_text_blok p {
+  line-height: 250%;
+  margin: 25px 0;
+}
+
+@media (max-width: 800px) {
+  .about_text_blok {
+    margin: 0 20px;
+  }
+}
+
+/*# sourceMappingURL=about_page.css.map */

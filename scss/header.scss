@@ -1,0 +1,59 @@
+@import './mixin.scss';
+
+header{
+    width: 100%;
+    @include flex(flex-start, center);
+    background: rgba(0, 157, 220, 1);
+    padding: 10px 0;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    .logo{
+        flex: 4;
+        text-align: center;
+        color: white;
+        @include flex(center, center);
+        img{
+            margin-right: 10px;
+        }
+        h1{
+            font-size: 30px;
+        }
+    }
+    nav.desctop_nav{
+        flex: 6;
+        @include flex(center, center);
+        a{
+            margin: 0 10px;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            font-size: 17px;
+            font-weight: 700;
+            transition: 0.5s;
+        }
+        a:hover{
+            border-radius: 0px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    nav.desctop_nav{
+        display: none!important;
+    }
+}
+
+@media (max-width:700px) {
+    header .logo{
+        flex: 8;
+        h1{
+            font-size: 24px;
+        }
+    }
+    header img{
+        width: 50px;
+    }
+}

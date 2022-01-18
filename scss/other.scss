@@ -1,0 +1,92 @@
+@import './mixin.scss';
+
+@font-face {
+    font-family: roboto;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+body, *{
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+}
+body{
+    min-height: 100vh;
+    @include flex(space-between, center, column);
+}
+body.hidden{
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.none{
+    display: none;
+}
+input, button{
+    outline: none;
+}
+h2{
+    font-size: 48px;
+    font-weight: 800;
+    margin: 20px 0;
+}
+h2.page_title{
+    text-align: center;
+}
+span.title{
+    font-size: 32px;
+    font-weight: 800;
+}
+.subtitle{
+    font-size: 24px;
+    font-weight: 700;
+}
+p{
+    font-size: 16px;
+    font-weight: 400;
+}
+b{
+    font-size: 16px;
+    font-weight: 700;
+}
+button.orange_btn{
+    background: #F26430;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    h2{
+        font-size: 34px;
+        font-weight: 700;
+    }
+    span.title{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .subtitle{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    p, b{
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 500px) {
+    h2{
+        font-size: 28px;
+    }
+    span.title{
+        font-size: 22px;
+    }
+    .subtitle{
+        font-size: 14px;
+    }
+}

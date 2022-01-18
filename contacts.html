@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+</head>
+<body>
+    <header></header>
+
+    <article>
+        <h2 class="page_title">Contacts page</h2>
+
+        <div class="contacts_form_blok">
+            <span class="subtitle">Register or Log in</span>
+            <form>
+                <div class="input_blok">
+                    <input type="text" required minlength="5" maxlength="10">
+                    <span>Name</span>
+                </div>
+                <div class="input_blok">
+                    <input type="email" required>
+                    <span>Email Address</span>
+                </div>
+                <div class="input_blok" id="password_blok">
+                    <input type="password" minlength="8" id="password" required>
+                    <div class="show_password"><img src="./images/hide_password.svg"></div>
+                    <span>Pasword</span>
+                </div>
+                <div class="input_blok" id="password_blok">
+                    <input type="password" minlength="8" id="confirm_password" required>
+                    <div class="show_password"><img src="./images/hide_password.svg"></div>
+                    <span>Confirm pasword</span>
+                    <div class="password_error">Confirm password incorrect.</div>
+                </div>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+    </article>
+
+    <footer></footer>
+
+<script src="./js/app.js"></script>
+<script src="./js/password_validate.js"></script>
+</body>
+</html>
