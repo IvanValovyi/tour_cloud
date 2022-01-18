@@ -39,6 +39,9 @@
 .join_tour_cloud .content form button {
   margin-top: 10px;
 }
+.join_tour_cloud .content img {
+  width: 30vw;
+}
 
 @media (max-width: 1800px) {
   .join_tour_cloud {
