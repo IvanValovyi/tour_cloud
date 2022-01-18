@@ -29,8 +29,17 @@
                 bottom: 7px;
                 left: 0px;
                 width: 100%;
-                height: 1px;
-                background: black;
+                border-top: 1px dashed black;
+            }
+            li::after{
+                content: url(../images/done_black.svg);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -25px;
+                width: 15px;
+                height: 15px;
+                stroke: white;
             }
         }
         .gift_blok{
@@ -47,7 +56,10 @@
                     }
                 }
                 li::before{
-                    background: rgb(255, 255, 255);
+                    border-top: 1px dashed rgb(255, 255, 255);
+                }
+                li::after{
+                    content: url(../images/done_white.svg);
                 }
             }
             img{
@@ -97,13 +109,17 @@
             img{
                 width: 100px;
                 height: 100px;
+                right: 10px;
             }
             h3.subtitle, button{
                 margin: 20px 0;
-            }
+            }  
         }
         .price_list li::before{
-            height: 0px;
+            bottom: 10px;
+        }
+        .price_list li::after{
+            left: -17px;
         }
         .price_list li p{
             margin-right: 10px;
@@ -116,6 +132,7 @@
                 img{
                     width: 80px;
                     height: 80px;
+                    right: 40px;
                 }
     }
 }
@@ -126,7 +143,7 @@
             width: 100%;
         }
         .gift_blok {
-            padding: 0 20px;
+            padding: 0 30px;
             img{
                 width: 65px;
                 height: 65px;
