@@ -1,0 +1,23 @@
+{
+  "name": "glory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanValovyi/tour_cloud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IvanValovyi/tour_cloud/issues"
+  },
+  "homepage": "https://github.com/IvanValovyi/tour_cloud#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-svg-sprite": "^1.5.0"
+  }
+}

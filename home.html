@@ -10,84 +10,92 @@
 <body>
     <header></header>
     
-    <article>        
-        <div class="become_partner">
+    <div id="app">
+        <div class="become_partner flex-row">
             <div class="text_blok">
                 <h2>Станьте партнером TourCloud</h2>
                 <p>Наша платформа допомагає об'єднати готель та клієнта безпосередньо, минаючи агентів та туроператорів</p>
                 <button class="orange_btn">Стати партнером</button>
             </div>
-            <img src="./images/become_partner.svg" alt="Become a partner">
+            <img src="./images/become_partner.png" alt="become_partner">
         </div>
-        <ul class="about_company">
+        <div class="about_company">
             <span class="title">Ми допомагаємо власникам готелів заробляти більше</span>
-            <li>
+            <div class='about_company_item flex-row'>
                 <div class="video">
                     <iframe src="https://www.youtube.com/embed/zyZAMR56mXY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div class="background_blok">
-                        <img src="./images/play.svg" alt="Play" class="play">
-                    </div>
+                    <section class="background_blok">
+                        <svg class="play">
+                            <use xlink:href='./sprite.svg#play'></use>
+                        </svg>
+                    </section>
                     <button class="orange_btn">Приєднатися</button>
                 </div>
-                <ul class="advantage">
-                    <li>
-                        <img src="./images/done.svg" alt="done">
+                <div class="list_blok">
+                    <div class="list_item">
+                        <svg>
+                            <use xlink:href="./sprite.svg#done"></use>
+                        </svg>
                         <div class="text">
                             <span class='subtitle'>Позбавимо від посередників</span>
                             <p>TourCloud - це принципово нова платформа для бронювання турів, яка об'єднує клієнта та готель безпосередньо, минаючи агентів та туроператорів</p>
                         </div>
-                    </li>
-                    <li>
-                        <img src="./images/done.svg" alt="done">
+                    </div>
+                    <div class="list_item">
+                        <svg>
+                            <use xlink:href="./sprite.svg#done"></use>
+                        </svg>
                         <div class="text">
                             <span class='subtitle'>Розробимо стратегію просування</span>
                             <p>Наші маркетологи, дизайнери та спеціалісти розробляють стратегію для реклами саме вашого готелю! І все це – БЕЗКОШТОВНО!</p>
                         </div>
-                    </li>
-                    <li>
-                        <img src="./images/done.svg" alt="done">
+                    </div>
+                    <div class="list_item">
+                        <svg>
+                            <use xlink:href="./sprite.svg#done"></use>
+                        </svg>
                         <div class="text">
                             <span class='subtitle'>Організуємо комплексний продаж послуг</span>
                             <p>Ми продаєм тільки тур-пакети, що позбавляє гостя 
-                                зайвого клопоту та метушні! Клієнт може одразу придбати квитки, замовити трансфер, за найкращою ціною додати послуги готелю: харчування і навіть екскурсії даного регіону.</p>
+                            зайвого клопоту та метушні! Клієнт може одразу придбати квитки, замовити трансфер, за найкращою ціною додати послуги готелю: харчування і навіть екскурсії даного регіону.</p>
                         </div>
-                    </li>
-                </ul>
-            </li>
+                    </div>
+                </div>
+            </div>
 
             <span class="title">Гарантуємо, що Ви одразу відчуєте переваги роботи з нами!</span>
-            <li>
-                <div class="image"><img src="./images/management.svg" alt="Management"></div>
+            <div class='about_company_item flex-row'>
+                <div class="image"><img src="./images/management.png" alt="Management"></div>
                 <div class="text_blok">
                     <span class='subtitle'>Допомога менеджерів</span>
                     <p>Менеджери з продажу TourCloud сформують із переліку послуг готелю ТурПакети таким чином, щоб реалізувати більше послуг готелю та збільшити середній чек клієнта.</p>
                 </div>
-            </li>
+            </div>
 
-            <li class="reverse">
+            <div class='about_company_item flex-row reverse'>
                 <div class="text_blok">
                     <span class='subtitle'>Допомога IT-спеціалістів</span>
                     <p>IT команда максимально точно і поки що безкоштовно заводить ваш готель на наш сайт.</p>
                 </div>
-                <div class="image"><img src="./images/management2.svg" alt="Management"></div>
-            </li>
+                <div class="image"><img src="./images/management2.png" alt="Management"></div>
+            </div>
 
-            <li>
-                <div class="image"><img src="./images/management3.svg" alt="Management"></div>
+            <div class='about_company_item flex-row'>
+                <div class="image"><img src="./images/management3.png" alt="Management"></div>
                 <div class="text_blok">
-                    <b>Робота Call-центру</b>
+                    <span class="subtitle">Робота Call-центру</span>
                     <p>Фахівці Call-центру проведуть клієнта через всі етапи продажів, так що вам залишиться тільки прийняти гостя і частину оплати, що залишилася.</p>
                 </div>
-            </li>
+            </div>
             <button class="orange_btn">Стати партнером</button>
-        </ul>
+        </div>
 
         <div class="price_blok">
             <span class="title">Вартість послуг</span>
             
-            <div class="first_blok">
+            <div class="first_blok flex-row">
                 <div class="commission">
-                    <img src="./images/commission.svg" alt="commission">
+                    <img src="./images/commission.png" alt="">
                     <span class="subtitle">комісія за наші послуги <br> від кожного бронювання</span>
                 </div>
                 <div class="commission_conditions">
@@ -101,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="second_blok">
+            <div class="second_blok flex-row">
                 <div class="increase_sales">
                     <img src="./images/raketa.png" alt="raketa">
                     <div class="text">
@@ -116,67 +124,108 @@
         <div class="favorable_conditions">
             <span class="title">Встигніть стати партнером <br> на вигідних умовах</span>
             
-            <div class="content">
-                <ul class="price_list">
+            <div class="content flex-row reverse">
+                <section>
                     <h3 class="subtitle">Ціна з 31 травня 2022 року</h3>
-                    <li>
-                        <p>Створення і розміщення турів</p>
-                        <section></section>
-                        <b>150 грн / мiсяць</b>
-                    </li>
-                    <li>
-                        <p>Робота спеціалістів сontact-центру</p>
-                        <section></section>
-                        <b>400 грн / мiсяць</b>
-                    </li>
-                    <li>
-                        <p>Оформлення сторінки готелю</p>
-                        <section></section>
-                        <b>700 грн</b>
-                    </li>
-                    <li>
-                        <p>Регулярна аналітика</p>
-                        <section></section>
-                        <b>250 грн / мiсяць</b>
-                    </li>
-                    <li>
-                        <p>Ведення бухгалтерії</p>
-                        <section></section>
-                        <b>300 грн / мiсяць</b>
-                    </li>
-                </ul>
+                <div class="list_blok">
+                    <div class='list_item'>
+                        <svg>
+                            <use xlink:href="./sprite.svg#done_black"></use>
+                        </svg>
+                        <div class="text">
+                            <p>Створення і розміщення турів</p>
+                            <b>150 грн / мiсяць</b>
+                        </div>
+                    </div>
+                    <div class='list_item'>
+                        <svg>
+                            <use xlink:href="./sprite.svg#done_black"></use>
+                        </svg>
+                        <div class="text">
+                            <p>Робота спеціалістів сontact-центру</p>
+                            <b>400 грн / мiсяць</b>
+                        </div>
+                    </div>
+                    <div class='list_item'>
+                        <svg>
+                            <use xlink:href="./sprite.svg#done_black"></use>
+                        </svg>
+                        <div class="text">
+                            <p>Оформлення сторінки готелю</p>
+                            <b>700 грн</b>
+                        </div>
+                    </div>
+                    <div class='list_item'>
+                        <svg>
+                            <use xlink:href="./sprite.svg#done_black"></use>
+                        </svg>
+                        <div class="text">
+                            <p>Регулярна аналітика</p>
+                            <b>250 грн / мiсяць</b>
+                        </div>
+                    </div>
+                    <div class='list_item'>
+                        <svg>
+                            <use xlink:href="./sprite.svg#done_black"></use>
+                        </svg>
+                        <div class="text">
+                            <p>Ведення бухгалтерії</p>
+                            <b>300 грн / мiсяць</b>
+                        </div>
+                    </div>
+                </div>
+                </section>
     
                 <div class="gift_blok">
-                    <img src="./images/gift.svg" alt="Gift">
-                    
-                    <ul class="price_list">
-                        <h3 class="subtitle">Встигніть саме зараз</h3>
-                        <li>
-                            <p>Створення і розміщення турів</p>
-                            <section></section>
-                            <b>Безкоштовно</b>
-                        </li>
-                        <li>
-                            <p>Робота спеціалістів сontact-центру</p>
-                            <section></section>
-                            <b>Безкоштовно</b>
-                        </li>
-                        <li>
-                            <p>Оформлення сторінки готелю</p>
-                            <section></section>
-                            <b>Безкоштовно</b>
-                        </li>
-                        <li>
-                            <p>Регулярна аналітика</p>
-                            <section></section>
-                            <b>Безкоштовно</b>
-                        </li>
-                        <li>
-                            <p>Ведення бухгалтерії</p>
-                            <section></section>
-                            <b>Безкоштовно</b>
-                        </li>
-                    </ul>
+                    <img src="./images/gift.png" alt="Gift">
+                    <h3 class="subtitle">Встигніть саме зараз</h3>
+                    <div class="list_blok">
+                        <div class='list_item'>
+                            <svg>
+                                <use xlink:href="./sprite.svg#done_white"></use>
+                            </svg>
+                            <div class="text">
+                                <p>Створення і розміщення турів</p>
+                                <b>150 грн / мiсяць</b>
+                            </div>
+                        </div>
+                        <div class='list_item'>
+                            <svg>
+                                <use xlink:href="./sprite.svg#done_white"></use>
+                            </svg>
+                            <div class="text">
+                                <p>Робота спеціалістів сontact-центру</p>
+                                <b>400 грн / мiсяць</b>
+                            </div>
+                        </div>
+                        <div class='list_item'>
+                            <svg>
+                                <use xlink:href="./sprite.svg#done_white"></use>
+                            </svg>
+                            <div class="text">
+                                <p>Оформлення сторінки готелю</p>
+                                <b>700 грн</b>
+                            </div>
+                        </div>
+                        <div class='list_item'>
+                            <svg>
+                                <use xlink:href="./sprite.svg#done_white"></use>
+                            </svg>
+                            <div class="text">
+                                <p>Регулярна аналітика</p>
+                                <b>250 грн / мiсяць</b>
+                            </div>
+                        </div>
+                        <div class='list_item'>
+                            <svg>
+                                <use xlink:href="./sprite.svg#done_white"></use>
+                            </svg>
+                            <div class="text">
+                                <p>Ведення бухгалтерії</p>
+                                <b>300 грн / мiсяць</b>
+                            </div>
+                        </div>
+                    </div>
                     <button class="orange_btn">Стати партнером</button>
     
                 </div>
@@ -185,28 +234,28 @@
 
         <div class="join_tour_cloud">
             <span class="title">Просувайте послуги свого готелю, <br> ставши партнером TourCloud</span>
-            <div class="content">
+            <div class="content flex-row">
 
                 <section class="image">
-                    <img src="./images/join.svg" alt="Join">
+                    <img src="./images/join.png" alt="Join">
                 </section>
 
                 <form class="join_form">
-                    <input type="text" placeholder="First name...">
-                    <input type="text" placeholder="Last name...">
-                    <input type="text" placeholder="Phone...">
-                    <input type="text" placeholder="Email...">
-                    <input type="text" placeholder="Company name...">
-                    <input type="text" placeholder="About your company...">
+                    <input type="text" placeholder="First name..." required>
+                    <input type="text" placeholder="Last name..." required>
+                    <input type="text" placeholder="Phone..." required>
+                    <input type="text" placeholder="Email (optional)...">
+                    <input type="text" placeholder="Company name..." required>
+                    <input type="text" placeholder="About your company..." required>
                     <section class="conditions_check">
-                        <input type="checkbox" id="conditions" name="conditions">
+                        <input type="checkbox" id="conditions" name="conditions" required>
                         <label for="conditions">Я погоджуюсь, відповідно до п. 3. Політики конфіденційності отримувати персоналізовані пропозиції, пов’язані з послугами, що надаються групою glorytour.com.ua або її партнерами. Ці пропозиції пристосовані за допомогою профілювання та автоматизованої обробки моїх даних, щоб бути більш актуальними для мене, і можуть бути надіслані мені поштою, електронною поштою, SMS, телефоном або онлайн-рекламою.<br>Натисніть "Пiдтвердити", щоб продовжити бронювання та підтвердити, що ви прочитали, зрозуміли та прийняли Загальні умови контракту на продаж пакетних відпусток, політики скасування, включаючи ваші права, викладені в Директиві (EU) 2015/2302 та Політиці конфіденційності. Якщо ви не хочете отримувати наші пропозиції, напишіть на адресу info@gloryhotels.group.</label>
                     </section>
                     <button class="orange_btn">Подати заявку на партнерство</button>
                 </form>
             </div>
         </div>
-    </article>
+    </div>
 
     <footer></footer>
 

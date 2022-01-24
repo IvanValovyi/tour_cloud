@@ -4,3 +4,20 @@
     justify-content: $justify-content;
     flex-direction: $flex-direction;
 }
+
+@mixin article_blok() {
+    padding: 30px 250px;
+
+    @media (max-width: 1800px) {
+            padding: 30px 100px;
+    }
+
+    @media (max-width: 1250px) {
+            padding: 30px;
+            width: calc(100vw - 60px);
+    }
+    @media (max-width: 750px) {
+        padding: 20px;
+        width: calc(100vw - 40px);
+}
+}

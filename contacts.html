@@ -26,16 +26,24 @@
                 </div>
                 <div class="input_blok" id="password_blok">
                     <input type="password" minlength="8" id="password" required>
-                    <div class="show_password"><img src="./images/hide_password.svg"></div>
+                    <div class="show_password">
+                        <svg>
+                            <use xlink:href='sprite.svg#show_password'></use>
+                        </svg>
+                    </div>
                     <span>Pasword</span>
                 </div>
                 <div class="input_blok" id="password_blok">
                     <input type="password" minlength="8" id="confirm_password" required>
-                    <div class="show_password"><img src="./images/hide_password.svg"></div>
+                    <div class="show_password">
+                        <svg>
+                            <use xlink:href='sprite.svg#show_password'></use>
+                        </svg>
+                    </div>
                     <span>Confirm pasword</span>
                     <div class="password_error">Confirm password incorrect.</div>
                 </div>
-                <button type="submit">Subscribe</button>
+                <button type="submit" class="submit">Subscribe</button>
             </form>
         </div>
 

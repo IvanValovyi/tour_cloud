@@ -2,7 +2,9 @@ let headers = document.querySelector('header')
 
 headers.innerHTML = `
 <section class='logo'>
-    <img src='./images/logo.svg'/>
+    <svg>
+        <use xlink:href="./sprite.svg#logo"></use>
+    </svg>
     <h1>TourCloud</h1>
 </section>
 
@@ -48,21 +50,15 @@ let body = document.querySelector('body')
             setTimeout(()=>{
                 mobile_menu_btn.innerHTML = '='
                 mobile_menu_btn.classList.remove('active')
-            }, 500)
-            setTimeout(()=>{
-                mobile_menu.style.display = 'none'
-            }, 1000)
+            }, 300)
         }
         else {
             body.classList.add('hidden')
             mobile_menu_btn.classList.add('active')
-            mobile_menu.style.display = 'flex'
-            setTimeout(()=>{
-                mobile_menu.classList.add('active')
-            }, 10)
+            mobile_menu.classList.add('active')
             setTimeout(()=>{
                 mobile_menu_btn.innerHTML = '×'
                 mobile_menu_btn.classList.remove('active')
-            }, 500)
+            }, 300)
         }
     }

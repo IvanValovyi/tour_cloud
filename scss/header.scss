@@ -12,8 +12,10 @@ header{
         text-align: center;
         color: white;
         @include flex(center, center);
-        img{
+        svg{
             margin-right: 10px;
+            width: 70px;
+            height: 35px;
         }
         h1{
             font-size: 30px;
@@ -34,7 +36,7 @@ header{
             transition: 0.5s;
         }
         a:hover{
-            border-radius: 0px;
+            border-radius: 0;
             background: rgba(0, 0, 0, 0.3);
         }
     }
@@ -53,7 +55,9 @@ header{
             font-size: 24px;
         }
     }
-    header img{
+    header .logo svg{
+        margin-right: 5px;
         width: 50px;
+        height: 25px;
     }
 }

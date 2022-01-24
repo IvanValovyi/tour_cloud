@@ -1,12 +1,10 @@
 @import './mixin.scss';
 
 .price_blok{
+    @include article_blok();
     background: linear-gradient(94.35deg, #009DDC 17.13%, #008AC2 82.87%);
     color: white;
-    @include flex(center, center, column);
-    padding: 30px 250px;
     .first_blok, .second_blok{
-        @include flex(center, center);
         margin: 50px 0;
     }
     .first_blok{
@@ -14,7 +12,7 @@
             flex: 1;
             li{
                 list-style: circle;
-                margin: 15px;
+                margin: 15px ;
             }
         }
         .commission{
@@ -55,24 +53,11 @@
     }
 }
 
-@media (max-width: 1800px) {
-    .price_blok{
-        padding: 30px 100px;
-    }
-}
-
-@media (max-width: 1250px) {
-    .price_blok{
-        padding: 30px;
-    }
-}
-
 @media (max-width: 1100px) {
     .price_blok{
         .first_blok, .second_blok{
-            flex-direction: column;
             .increase_sales, .commission{
-                margin-bottom: 50px;
+                margin: 35px 0;
             }
             .commission img{
                 width: 40vw;
@@ -94,7 +79,7 @@
                 padding-left: 150px;
                 img{
                     width: 150px;
-                    left: 0px;
+                    left: 0;
                 }
                 p{
                     margin-top: 7px;
@@ -109,10 +94,10 @@
     .price_blok{
         .second_blok .increase_sales{
             padding: 10px;
-            padding-left: 120px;
+            padding-left: 80px;
             img{
                 width: 120px;
-                left: 0px;
+                left: -20px;
             }
         }
         .first_blok, .second_blok{

@@ -1,30 +1,31 @@
 @import './mixin.scss';
 
-ul.about_company{
-    margin: 30px 250px;
+.about_company{
+    @include article_blok();
     @include flex(center, center, column);
     .title{
         margin-top: 30px;
     }
-    li{
-        @include flex(space-around, center);
+    .about_company_item{
         margin: 50px 0;
         .text_blok{
             margin: 0 25px;
         }
-        div, ul{
-            flex: 1;
-        }
-        ul.advantage{
+        .list_blok{
             @include flex(flex-start, flex-start, column);
-            li{
+            .list_item{
+                position: relative;
                 margin: 20px 0;
-                .text{
-                    margin-left: 25px;
-                }
-                img{
-                    width: 50px;
-                }
+                padding-left: 75px;
+                
+            }
+            .list_item .text{
+                width: 100%;
+            }
+            .list_item svg{
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
             }
         }
         .video{
@@ -37,7 +38,7 @@ ul.about_company{
             }
             .background_blok{
                 position: absolute;
-                top: 0px;
+                top: 0;
                 left: 50%;
                 transform: translateX(-50%);
                 background: rgba(112, 112, 97, 0.95);
@@ -79,14 +80,8 @@ ul.about_company{
     }
 }
 
-@media (max-width: 1800px) {
-    ul.about_company{
-        margin: 30px 100px;
-    }
-}
-
 @media (max-width: 1550px) {
-    ul.about_company li {
+    .about_company li {
         .video{
             iframe, .background_blok{
                 width: 495px;
@@ -95,9 +90,6 @@ ul.about_company{
         }
         li{
             margin: 15px 0;
-            img{
-                width: 35px;
-            }
         }
         p{
             margin-top: 7px;
@@ -106,18 +98,11 @@ ul.about_company{
     }
 }
 
-@media (max-width: 1250px) {
-    ul.about_company{
-        margin: 30px;
-    }
-}
-
 @media (max-width: 1100px) {
-    ul.about_company .title{
-        margin-top: 0px;
+    .about_company .title{
+        margin-top: 0;
     }
-    ul.about_company li{
-        flex-direction: column;
+    .about_company .about_company_item{
         text-align: center;
         margin: 40px 0;
         .video{
@@ -129,27 +114,28 @@ ul.about_company{
         img{
             margin-bottom: 30px;
         }
-        ul.advantage{
+        .list_blok{
             @include flex(center, center, column);
             margin-top: 30px;
-            li{
+            padding-left: 0px;
+            .list_item{
+                padding-left: 0px;
                 flex-direction: row;
                 align-items: flex-start;
                 text-align: start;
-                width: 80%;
-                .text{
-                    margin-left: 15px;
-                }
+                // svg{
+                //     margin: 20px;
+                // }
             }
         }
     }
-    .about_company li.reverse{
+    .about_company .about_company_item.reverse{
         flex-direction: column-reverse;
     }
 }
 
 @media (max-width: 700px) {
-    ul.about_company li{
+    .about_company .about_company_item{
         margin: 30px 0;
         .video{
             iframe, .background_blok{
@@ -160,30 +146,23 @@ ul.about_company{
         img{
             width: 80vw;
         }
-        ul.advantage li{
-                width: 80%;
-        }
     }
 }
 
 @media (max-width: 500px) {
-    ul.about_company{
-        margin: 30px;
-        li{
+    .about_company .about_company_item{
             .video{
                 iframe, .background_blok{
                     width: calc(100vw - 60px);
+                    height: 150px;
                 }
+            }
+            .list_blok .list_item{
+                margin: 5px 0;
             }
             img{
                 width: calc(100vw - 60px);
             }
-            ul.advantage li{
-                    width: 100%;
-                    img{
-                        width: 25px;
-                    }
-            }
+            
         }
-    }
 }

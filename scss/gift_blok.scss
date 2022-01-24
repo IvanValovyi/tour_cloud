@@ -1,17 +1,25 @@
 @import './mixin.scss';
 
 .favorable_conditions{
-    margin: 70px 250px;
+    @include article_blok();
     .content{
-        @include flex(space-around, center);
-        div:first-child{
-            @include flex(center, center);
-        }
-        .price_list{
-            li{
-                @include flex(space-between, center);
-                position: relative;
+        .list_blok{
+            .list_item{
                 margin: 10px 0;
+                .text{
+                    @include flex(space-between, center);
+                    width: 100%;
+                    position: relative;
+                }
+                .text::before{
+                    content: '';
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 7px;
+                    left: 0;
+                    width: 100%;
+                    border-top: 1px dashed black;
+                }
                 p{
                     margin-right: 50px;
                 }
@@ -21,107 +29,81 @@
                     position: relative;
                     z-index: 2;
                 }
+                svg{
+                    width: 15px;
+                    height: 15px;
+                    margin-right: 5px;
+                }
             }
-            li::before{
-                content: '';
-                position: absolute;
-                z-index: 1;
-                bottom: 7px;
-                left: 0px;
-                width: 100%;
-                border-top: 1px dashed black;
-            }
-            li::after{
-                content: url(../images/done_black.svg);
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                left: -25px;
-                width: 15px;
-                height: 15px;
-                stroke: white;
-            }
+        }
+        h3.subtitle{
+            margin-bottom: 10px;
         }
         .gift_blok{
             position: relative;
-            padding: 0 40px;
+            padding: 40px;
             border-radius: 10px;
             background: #009DDC;
             color: white;
             @include flex(center, center, column);
-            .price_list{
-                li{
+            h3.subtitle{
+                width: 100%;
+                text-align: start;
+            }
+            .list_blok{
+                .list_item{
                     p, b{
                         background: #009DDC;
+                        white-space: nowrap;
                     }
-                }
-                li::before{
-                    border-top: 1px dashed rgb(255, 255, 255);
-                }
-                li::after{
-                    content: url(../images/done_white.svg);
+                    .text::before{
+                        border-top: 1px dashed rgb(255, 255, 255);
+                    }
                 }
             }
             img{
                 position: absolute;
                 right: 40px;
-                top: 0px;
+                top: 0;
                 transform: translateY(-50%);
                 width: 150px;
                 height: 150px;
             }
-            h3.subtitle, button{
-                margin: 40px 0;
+            h3.subtitle{
+                margin-bottom: 20px;
+            }
+            button{
+                margin-top: 10px;
             }
         }
-    }
-}
-
-@media (max-width: 1800px) {
-    .favorable_conditions{
-        margin: 70px 100px
-    }
-}
-
-@media (max-width: 1250px) {
-    .favorable_conditions{
-        margin: 70px 30px
     }
 }
 
 @media (max-width: 1100px) {
-    .favorable_conditions{
-        .content{
-            flex-direction: column-reverse;
-            .gift_blok{
-                margin: 50px 0;
-            }
-        }
+    .favorable_conditions .content .gift_blok{
+        margin: 50px 0;
     }
 }
 
 @media (max-width: 800px) {
-    .favorable_conditions{
-        margin: 40px 30px
-    }
     .favorable_conditions .content{
+        h3.subtitle{
+            margin-bottom: 20px;
+        }
         .gift_blok{
             img{
                 width: 100px;
                 height: 100px;
                 right: 10px;
             }
-            h3.subtitle, button{
-                margin: 20px 0;
-            }  
         }
-        .price_list li::before{
+        .list_blok .list_item::before{
             bottom: 10px;
         }
-        .price_list li::after{
+        .list_blok .list_item::after{
             left: -17px;
         }
-        .price_list li p{
+        .list_blok .list_item p{
             margin-right: 10px;
         }
     }
@@ -129,21 +111,18 @@
 
 @media (max-width: 500px) {
     .favorable_conditions .content .gift_blok{
+        padding: 20px 10px;
                 img{
                     width: 80px;
                     height: 80px;
-                    right: 40px;
+                    right: 20px;
                 }
     }
 }
 
 @media (max-width: 400px) {
     .favorable_conditions .content{
-        .price_list{
-            width: 100%;
-        }
         .gift_blok {
-            padding: 0 30px;
             img{
                 width: 65px;
                 height: 65px;

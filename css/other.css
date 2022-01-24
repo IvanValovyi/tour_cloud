@@ -1,11 +1,15 @@
 @font-face {
-  font-family: roboto;
-  src: url("../fonts/Roboto-Light.ttf");
+  font-family: roboto_light;
+  src: local("Roboto-Light"), url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: roboto_bold;
+  src: local("Roboto-Bold"), url("../fonts/Roboto-Bold.ttf");
 }
 body, * {
   margin: 0;
   padding: 0;
-  font-family: roboto;
+  font-family: roboto_light;
 }
 
 body {
@@ -73,8 +77,53 @@ button.orange_btn {
   border: none;
   font-size: 16px;
   font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
+button.orange_btn:hover {
+  background: #eb4a10;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 4px rgba(196, 188, 188, 0.719);
+}
+
+.list_blok {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+.list_blok .list_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@media (max-width: 1100px) {
+  .flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+  }
+
+  .flex-row.reverse {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column-reverse;
+  }
+}
 @media (max-width: 700px) {
   h2 {
     font-size: 34px;

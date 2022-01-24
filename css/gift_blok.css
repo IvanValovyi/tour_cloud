@@ -1,57 +1,63 @@
 .favorable_conditions {
-  margin: 70px 250px;
+  padding: 30px 250px;
 }
-.favorable_conditions .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+@media (max-width: 1800px) {
+  .favorable_conditions {
+    padding: 30px 100px;
+  }
 }
-.favorable_conditions .content div:first-child {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+@media (max-width: 1250px) {
+  .favorable_conditions {
+    padding: 30px;
+    width: calc(100vw - 60px);
+  }
 }
-.favorable_conditions .content .price_list li {
+@media (max-width: 750px) {
+  .favorable_conditions {
+    padding: 20px;
+    width: calc(100vw - 40px);
+  }
+}
+.favorable_conditions .content .list_blok .list_item {
+  margin: 10px 0;
+}
+.favorable_conditions .content .list_blok .list_item .text {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  width: 100%;
   position: relative;
-  margin: 10px 0;
 }
-.favorable_conditions .content .price_list li p {
+.favorable_conditions .content .list_blok .list_item .text::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 7px;
+  left: 0;
+  width: 100%;
+  border-top: 1px dashed black;
+}
+.favorable_conditions .content .list_blok .list_item p {
   margin-right: 50px;
 }
-.favorable_conditions .content .price_list li p, .favorable_conditions .content .price_list li b {
+.favorable_conditions .content .list_blok .list_item p, .favorable_conditions .content .list_blok .list_item b {
   padding: 5px;
   background: white;
   position: relative;
   z-index: 2;
 }
-.favorable_conditions .content .price_list li::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: 7px;
-  left: 0px;
-  width: 100%;
-  border-top: 1px dashed black;
-}
-.favorable_conditions .content .price_list li::after {
-  content: url(../images/done_black.svg);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -25px;
+.favorable_conditions .content .list_blok .list_item svg {
   width: 15px;
   height: 15px;
-  stroke: white;
+  margin-right: 5px;
+}
+.favorable_conditions .content h3.subtitle {
+  margin-bottom: 10px;
 }
 .favorable_conditions .content .gift_blok {
   position: relative;
-  padding: 0 40px;
+  padding: 40px;
   border-radius: 10px;
   background: #009DDC;
   color: white;
@@ -60,82 +66,67 @@
   justify-content: center;
   flex-direction: column;
 }
-.favorable_conditions .content .gift_blok .price_list li p, .favorable_conditions .content .gift_blok .price_list li b {
+.favorable_conditions .content .gift_blok h3.subtitle {
+  width: 100%;
+  text-align: start;
+}
+.favorable_conditions .content .gift_blok .list_blok .list_item p, .favorable_conditions .content .gift_blok .list_blok .list_item b {
   background: #009DDC;
+  white-space: nowrap;
 }
-.favorable_conditions .content .gift_blok .price_list li::before {
+.favorable_conditions .content .gift_blok .list_blok .list_item .text::before {
   border-top: 1px dashed white;
-}
-.favorable_conditions .content .gift_blok .price_list li::after {
-  content: url(../images/done_white.svg);
 }
 .favorable_conditions .content .gift_blok img {
   position: absolute;
   right: 40px;
-  top: 0px;
+  top: 0;
   transform: translateY(-50%);
   width: 150px;
   height: 150px;
 }
-.favorable_conditions .content .gift_blok h3.subtitle, .favorable_conditions .content .gift_blok button {
-  margin: 40px 0;
+.favorable_conditions .content .gift_blok h3.subtitle {
+  margin-bottom: 20px;
+}
+.favorable_conditions .content .gift_blok button {
+  margin-top: 10px;
 }
 
-@media (max-width: 1800px) {
-  .favorable_conditions {
-    margin: 70px 100px;
-  }
-}
-@media (max-width: 1250px) {
-  .favorable_conditions {
-    margin: 70px 30px;
-  }
-}
 @media (max-width: 1100px) {
-  .favorable_conditions .content {
-    flex-direction: column-reverse;
-  }
   .favorable_conditions .content .gift_blok {
     margin: 50px 0;
   }
 }
 @media (max-width: 800px) {
-  .favorable_conditions {
-    margin: 40px 30px;
+  .favorable_conditions .content h3.subtitle {
+    margin-bottom: 20px;
   }
-
   .favorable_conditions .content .gift_blok img {
     width: 100px;
     height: 100px;
     right: 10px;
   }
-  .favorable_conditions .content .gift_blok h3.subtitle, .favorable_conditions .content .gift_blok button {
-    margin: 20px 0;
-  }
-  .favorable_conditions .content .price_list li::before {
+  .favorable_conditions .content .list_blok .list_item::before {
     bottom: 10px;
   }
-  .favorable_conditions .content .price_list li::after {
+  .favorable_conditions .content .list_blok .list_item::after {
     left: -17px;
   }
-  .favorable_conditions .content .price_list li p {
+  .favorable_conditions .content .list_blok .list_item p {
     margin-right: 10px;
   }
 }
 @media (max-width: 500px) {
+  .favorable_conditions .content .gift_blok {
+    padding: 20px 10px;
+  }
   .favorable_conditions .content .gift_blok img {
     width: 80px;
     height: 80px;
-    right: 40px;
+    right: 20px;
   }
 }
 @media (max-width: 400px) {
-  .favorable_conditions .content .price_list {
-    width: 100%;
-  }
-  .favorable_conditions .content .gift_blok {
-    padding: 0 30px;
-  }
   .favorable_conditions .content .gift_blok img {
     width: 65px;
     height: 65px;
