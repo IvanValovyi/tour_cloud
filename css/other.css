@@ -1,17 +1,3 @@
-@font-face {
-  font-family: roboto_light;
-  src: local("Roboto-Light"), url("../fonts/Roboto-Light.ttf");
-}
-@font-face {
-  font-family: roboto_bold;
-  src: local("Roboto-Bold"), url("../fonts/Roboto-Bold.ttf");
-}
-body, * {
-  margin: 0;
-  padding: 0;
-  font-family: roboto_light;
-}
-
 body {
   min-height: 100vh;
   display: flex;
@@ -19,7 +5,11 @@ body {
   justify-content: space-between;
   flex-direction: column;
 }
-
+body, body * {
+  margin: 0;
+  padding: 0;
+  font-family: open_sans;
+}
 body.hidden {
   overflow: hidden;
 }
@@ -45,7 +35,6 @@ h2 {
   font-weight: 800;
   margin: 20px 0;
 }
-
 h2.page_title {
   text-align: center;
 }
@@ -53,11 +42,17 @@ h2.page_title {
 span.title {
   font-size: 32px;
   font-weight: 800;
+  text-align: start;
+  width: 100%;
 }
 
 .subtitle {
   font-size: 24px;
   font-weight: 700;
+}
+
+h1, h2, .title, .subtitle, a {
+  font-family: raleway;
 }
 
 p {
@@ -70,9 +65,7 @@ b {
   font-weight: 700;
 }
 
-button.orange_btn {
-  background: #F26430;
-  color: white;
+button.orange_btn, button.white_btn {
   padding: 10px 50px;
   border: none;
   font-size: 16px;
@@ -80,11 +73,26 @@ button.orange_btn {
   cursor: pointer;
   transition: 0.5s;
 }
-
+button.orange_btn {
+  background: #F26430;
+  color: white;
+}
 button.orange_btn:hover {
   background: #eb4a10;
   border-radius: 10px;
   box-shadow: 0 0 2px 4px rgba(196, 188, 188, 0.719);
+}
+button.white_btn {
+  background: white;
+  color: black;
+}
+button.white_btn:hover {
+  border-radius: 10px;
+  box-shadow: 0 0 2px 4px rgba(196, 188, 188, 0.719);
+}
+
+.green_text {
+  color: #105E44;
 }
 
 .list_blok {
@@ -116,7 +124,6 @@ button.orange_btn:hover {
     justify-content: start;
     flex-direction: column;
   }
-
   .flex-row.reverse {
     display: flex;
     align-items: center;

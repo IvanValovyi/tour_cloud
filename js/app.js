@@ -17,16 +17,63 @@ headers.innerHTML = `
 <button class='mobile_nav_btn'>=</button>
 
 <nav class='mobile_nav'>
-    <a href='./home.html'>HOME</a>
-    <a href='./about.html'>ABOUT</a>
-    <a href='./contacts.html'>CONTACTS</a>
+    <a href='#' class='login'>
+    <svg>
+        <use xlink:href='./sprite.svg#profile'></use>
+    </svg>
+
+    <span>Увійти</span>
+    </a>
+
+    <a href='./about.html'>Про нас</a>
+    <a href='./home.html'>Стати партнером</a>
+    <a href='./contacts.html'>контакти</a>
+
+    <a href='#' class='pay'>
+        <svg>
+            <use xlink:href='./sprite.svg#bitcoin'></use>
+        </svg>
+        <span>Приймаємо для оплати криптовалюту</span>
+    </a>
 </nav>
 `
 
 let footer = document.querySelector('footer')
 
 footer.innerHTML = `
-<p>Copyright © 2021. All Rights Reserved.</p>
+<section class='black_blok'>
+<div class='info'>
+    <section>
+        <p>+38 067 277 40 40</p>
+        <p>+38 067 277 40 40</p>
+        <p>+38 067 277 40 40</p>
+    </section>
+    <section>
+        <p class='email'>info@glory-tour.com.ua</p>
+        <p class='address desctop'>м. Київ, вул. Велика Васильківська 129, офіс 3</p>
+        <p class='address mobile'>м. Київ,<br/>вул. Велика<br/>Васильківська 129, офіс 3</p>
+    </section>
+</div>
+<div class='social'>
+    <section class='images'>
+        <svg class='facebook'>
+            <use xlink:href='./sprite.svg#facebook'></use>
+        </svg>
+        <svg class='instagram'>
+            <use xlink:href='./sprite.svg#instagram'></use>
+        </svg>
+    </section>
+    <section class='pay'>
+        <svg class='bitcoin'>
+            <use xlink:href='./sprite.svg#bitcoin'></use>
+        </svg>
+        <p>Приймаємо для оплати криптовалюту</p>
+    </section>
+</div>
+</section>
+<section class='white_blok'>
+    <p>© 2021 Компанія "Glory Tour"</p>
+</section>
 `
 
 let mobile_menu_btn = document.querySelector('.mobile_nav_btn')

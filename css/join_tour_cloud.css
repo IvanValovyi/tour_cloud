@@ -18,6 +18,21 @@
     width: calc(100vw - 40px);
   }
 }
+.join_tour_cloud .title_blok {
+  position: relative;
+  padding-bottom: 30px;
+  width: max-content;
+}
+.join_tour_cloud .title_blok svg.arrow {
+  position: absolute;
+  left: 100%;
+  top: 30px;
+  height: 80px;
+  width: 290px;
+}
+.join_tour_cloud .content {
+  align-items: flex-start;
+}
 .join_tour_cloud .content form, .join_tour_cloud .content section {
   flex: 1;
   display: flex;
@@ -31,16 +46,21 @@
   margin: 10px 0;
   font-size: 14px;
   font-weight: 400;
+  border: 1px solid #DBD7D7;
+}
+.join_tour_cloud .content form input:focus {
+  border: 2px solid #009DDC;
 }
 .join_tour_cloud .content form .conditions_check {
   position: relative;
-  margin: 20px 0;
+  margin: 10px 0;
+  padding-left: 20px;
   font-size: 11px;
   font-weight: 400;
 }
 .join_tour_cloud .content form .conditions_check input {
   position: absolute;
-  left: -30px;
+  left: -10px;
   top: 0;
   width: 20px;
   height: 20px;
@@ -50,11 +70,23 @@
 .join_tour_cloud .content form button {
   margin-top: 10px;
 }
+.join_tour_cloud .content form button.mobile {
+  display: none;
+}
 .join_tour_cloud .content img {
   width: 30vw;
 }
 
 @media (max-width: 1100px) {
+  .join_tour_cloud .title_blok {
+    width: auto;
+  }
+  .join_tour_cloud .title_blok svg.arrow {
+    display: none;
+  }
+  .join_tour_cloud .content form {
+    align-items: center;
+  }
   .join_tour_cloud .content form input {
     width: calc(100% - 20px);
   }
@@ -65,6 +97,12 @@
   }
   .join_tour_cloud .content form .conditions_check {
     margin: 20px;
+  }
+  .join_tour_cloud .content form button.mobile {
+    display: block;
+  }
+  .join_tour_cloud .content form button.desctop {
+    display: none;
   }
 }
 

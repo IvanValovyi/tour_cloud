@@ -1,4 +1,8 @@
 .price_blok {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 30px 250px;
   background: linear-gradient(94.35deg, #009DDC 17.13%, #008AC2 82.87%);
   color: white;
@@ -20,6 +24,10 @@
     width: calc(100vw - 40px);
   }
 }
+.price_blok span.title {
+  text-align: center;
+  width: 100%;
+}
 .price_blok .first_blok, .price_blok .second_blok {
   margin: 50px 0;
 }
@@ -27,7 +35,7 @@
   flex: 1;
 }
 .price_blok .first_blok div li {
-  list-style: circle;
+  list-style: disc;
   margin: 15px;
 }
 .price_blok .first_blok .commission {
@@ -43,6 +51,7 @@
   width: 400px;
 }
 .price_blok .second_blok .increase_sales {
+  position: relative;
   background: #0075A5;
   border-radius: 10px;
   flex: 6;
@@ -51,8 +60,10 @@
   justify-content: start;
   flex-direction: row;
   position: relative;
-  padding: 25px;
+  padding: 10px 25px;
   padding-left: 240px;
+  height: 150px;
+  max-width: 750px;
 }
 .price_blok .second_blok .increase_sales img {
   position: absolute;
@@ -65,14 +76,33 @@
   margin-top: 10px;
   line-height: 150%;
 }
+.price_blok .second_blok .increase_sales svg.arrow {
+  position: absolute;
+  z-index: 1;
+  left: 100%;
+  bottom: -70px;
+  width: 200px;
+  height: 185px;
+}
 .price_blok .second_blok .join {
   flex: 4;
   text-align: center;
+}
+.price_blok .second_blok .join button {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 1100px) {
   .price_blok .first_blok .increase_sales, .price_blok .first_blok .commission, .price_blok .second_blok .increase_sales, .price_blok .second_blok .commission {
     margin: 35px 0;
+  }
+  .price_blok .first_blok .increase_sales, .price_blok .second_blok .increase_sales {
+    height: max-content;
+    max-width: none;
+  }
+  .price_blok .first_blok .increase_sales svg.arrow, .price_blok .second_blok .increase_sales svg.arrow {
+    display: none;
   }
   .price_blok .first_blok .commission img, .price_blok .second_blok .commission img {
     width: 40vw;

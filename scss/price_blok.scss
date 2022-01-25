@@ -1,9 +1,14 @@
 @import './mixin.scss';
 
 .price_blok{
+    @include flex(center, center, column);
     @include article_blok();
     background: linear-gradient(94.35deg, #009DDC 17.13%, #008AC2 82.87%);
     color: white;
+    span.title{
+        text-align: center;
+        width: 100%;
+    }
     .first_blok, .second_blok{
         margin: 50px 0;
     }
@@ -11,7 +16,7 @@
         div{
             flex: 1;
             li{
-                list-style: circle;
+                list-style: disc;
                 margin: 15px ;
             }
         }
@@ -27,13 +32,16 @@
     }
     .second_blok{
         .increase_sales{
+            position: relative;
             background: #0075A5;
             border-radius: 10px;
             flex: 6;
             @include flex(start, center);
             position: relative;
-            padding: 25px;
+            padding: 10px 25px;
             padding-left: 240px;
+            height: 150px;
+            max-width: 750px;
             img{
                 position: absolute;
                 width: 200px;
@@ -45,10 +53,22 @@
                 margin-top: 10px;
                 line-height: 150%;
             }
+            svg.arrow{
+                position: absolute;
+                z-index: 1;
+                left: 100%;
+                bottom: -70px;
+                width: 200px;
+                height: 185px;
+            }
         }
         .join{
             flex: 4;
             text-align: center;
+            button{
+                position: relative;
+                z-index: 2;
+            }
         }
     }
 }
@@ -58,6 +78,13 @@
         .first_blok, .second_blok{
             .increase_sales, .commission{
                 margin: 35px 0;
+            }
+            .increase_sales{
+                height: max-content;
+                max-width: none;
+                svg.arrow{
+                    display: none;
+                }
             }
             .commission img{
                 width: 40vw;

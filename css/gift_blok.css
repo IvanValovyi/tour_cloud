@@ -45,6 +45,7 @@
   padding: 5px;
   background: white;
   position: relative;
+  white-space: nowrap;
   z-index: 2;
 }
 .favorable_conditions .content .list_blok .list_item svg {
@@ -72,7 +73,6 @@
 }
 .favorable_conditions .content .gift_blok .list_blok .list_item p, .favorable_conditions .content .gift_blok .list_blok .list_item b {
   background: #009DDC;
-  white-space: nowrap;
 }
 .favorable_conditions .content .gift_blok .list_blok .list_item .text::before {
   border-top: 1px dashed white;

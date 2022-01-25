@@ -1,10 +1,150 @@
 footer {
-  background: #1b1818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: black;
   color: white;
-  padding: 10px 0;
-  text-align: center;
   width: 100%;
   border-radius: 5px 5px 0 0;
+  font-size: 12px;
+  font-weight: 400;
+}
+footer > section {
+  padding: 15px 0;
+}
+footer .black_blok {
+  width: calc(100% - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+footer .black_blok > div {
+  padding: 0 20px;
+}
+footer .black_blok .info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+footer .black_blok .info section:last-child {
+  margin-left: 35px;
+}
+footer .black_blok .info .address.mobile {
+  display: none;
+}
+footer .black_blok .social {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .black_blok .social svg {
+  width: 20px;
+  height: 20px;
+}
+footer .black_blok .social .images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+footer .black_blok .social .images svg {
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+footer .black_blok .social .images .instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #faba4c, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  fill: white;
+}
+footer .black_blok .social .images .facebook {
+  background: #3B5998;
+  fill: white;
+}
+footer .black_blok .social .pay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  margin-top: 10px;
+}
+footer .black_blok .social .pay svg {
+  background: #F7931A;
+  padding: 1px;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+footer .white_blok {
+  background: white;
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  footer > section {
+    padding: 7px 0;
+  }
+  footer .black_blok {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    padding-top: 20px;
+  }
+  footer .black_blok > div {
+    padding: 0 20px;
+  }
+  footer .black_blok, footer .black_blok .info {
+    flex-direction: column;
+    align-items: start;
+  }
+  footer .black_blok .info {
+    width: calc(100% - 40px);
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+  }
+  footer .black_blok .info section:last-child {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  footer .black_blok .info section:last-child .email {
+    margin-bottom: 15px;
+  }
+  footer .black_blok .info .address.mobile {
+    display: block;
+  }
+  footer .black_blok .info .address.desctop {
+    display: none;
+  }
+  footer .black_blok .social .images {
+    position: absolute;
+    flex-direction: column;
+    right: 20px;
+    top: 20px;
+  }
+  footer .black_blok .social .images svg {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0;
+  }
+  footer .black_blok .social .images svg.instagram {
+    margin-top: 15px;
+  }
+  footer .black_blok .social .pay {
+    margin: 10px 0;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

@@ -1,27 +1,18 @@
 @import './mixin.scss';
 
-@font-face {
-    font-family: roboto_light;
-    src: local('Roboto-Light'),
-         url('../fonts/Roboto-Light.ttf');
-}
-@font-face {
-    font-family: roboto_bold;
-    src: local('Roboto-Bold'),
-         url('../fonts/Roboto-Bold.ttf');
-}
-body, *{
-    margin: 0;
-    padding: 0;
-    font-family: roboto_light;
-}
 body{
     min-height: 100vh;
     @include flex(space-between, center, column);
+    &, *{
+        margin: 0;
+        padding: 0;
+        font-family: open_sans;
+    }
+    &.hidden{
+        overflow: hidden;
+    }
 }
-body.hidden{
-    overflow: hidden;
-}
+
 a{
     text-decoration: none;
 }
@@ -38,17 +29,22 @@ h2{
     font-size: 48px;
     font-weight: 800;
     margin: 20px 0;
-}
-h2.page_title{
-    text-align: center;
+    &.page_title{
+        text-align: center;
+    }
 }
 span.title{
     font-size: 32px;
     font-weight: 800;
+    text-align: start;
+    width: 100%;
 }
 .subtitle{
     font-size: 24px;
     font-weight: 700;
+}
+h1, h2, .title, .subtitle, a{
+    font-family: raleway;
 }
 p{
     font-size: 16px;
@@ -58,22 +54,36 @@ b{
     font-size: 16px;
     font-weight: 700;
 }
-button.orange_btn{
-    background: #F26430;
-    color: white;
-    padding: 10px 50px;
-    border: none;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.5s;
+button{
+    &.orange_btn, &.white_btn{
+        padding: 10px 50px;
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    &.orange_btn{
+        background: #F26430;
+        color: white;
+        &:hover{
+            background: #eb4a10;
+            border-radius: 10px;
+            box-shadow: 0 0 2px 4px rgba(196, 188, 188, 0.719);
+        }
+    }
+    &.white_btn{
+        background: white;
+        color: black;
+        &:hover{
+            border-radius: 10px;
+            box-shadow: 0 0 2px 4px rgba(196, 188, 188, 0.719);
+        }
+    }
 }
-button.orange_btn:hover{
-    background: #eb4a10;
-    border-radius: 10px;
-    box-shadow: 0 0 2px 4px rgba(196, 188, 188, 0.719);
+.green_text{
+    color: #105E44;
 }
-
 .list_blok{
     @include flex(flex-start, center, column);
     width: 100%;
@@ -89,10 +99,10 @@ button.orange_btn:hover{
 
 @media (max-width:1100px) {
     .flex-row{
-        @include flex(start, center, column)
-    }
-    .flex-row.reverse{
-        @include flex(start, center, column-reverse)
+        @include flex(start, center, column);
+        &.reverse{
+            @include flex(start, center, column-reverse);
+        }
     }
 }
 

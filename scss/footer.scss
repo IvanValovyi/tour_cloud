@@ -1,8 +1,136 @@
+@import './mixin.scss';
+
 footer{
-    background: rgb(27, 24, 24);
+    @include flex(center, center, column);
+    background: rgb(0, 0, 0);
     color: white;
-    padding: 10px 0;
-    text-align: center;
     width: 100%;
     border-radius: 5px 5px 0 0;
+    font-size: 12px;
+    font-weight: 400;
+    & > section{
+        padding: 15px 0;
+    }
+    .black_blok{
+        width: calc(100% - 40px);
+        & > div{
+            padding: 0 20px;
+        }
+        @include flex(space-between, center);
+        .info{
+            @include flex(flex-start, center);
+            section:last-child{
+                margin-left: 35px
+            }
+            .address.mobile{
+                display: none;
+            }
+        }
+        .social{
+            @include flex(center, flex-end, column);
+            svg{
+                width: 20px;
+                height: 20px;
+            }
+            .images{
+                @include flex(center, center);
+                svg{
+                    margin: 0 10px;
+                    padding: 5px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+                .instagram{
+                   background: radial-gradient(circle farthest-corner at 35% 90%, #faba4c, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+                   fill: white;
+                }
+                .facebook{
+                    background: #3B5998;
+                    fill: white;
+                }
+            }
+            .pay{
+                @include flex(center, center);
+                cursor: pointer;
+                margin-top: 10px;
+                svg{
+                    background: #F7931A;
+                    padding: 1px;
+                    border-radius: 100%;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .white_blok{
+        background: white;
+        color: black;
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+    }
+}
+
+@media (max-width:1000px) {
+    footer {
+        font-size: 10px;
+        font-weight: 400;
+        & > section{
+            padding: 7px 0;
+        }
+        .black_blok{
+            position: relative;
+            width: 100%;
+            padding: 0;
+            padding-top: 20px;
+            & > div{
+                padding: 0 20px;
+            }
+            &, .info{
+                flex-direction: column;
+                align-items: start;
+            }
+            .info{
+                width: calc(100% - 40px);
+                padding-bottom: 20px;
+                border-bottom: 1px solid white;
+                section:last-child{
+                    margin-left: 0;
+                    margin-top: 15px;
+                    .email{
+                        margin-bottom: 15px;
+                    }
+                }
+                .address{
+                    &.mobile{
+                        display: block;
+                    }
+                    &.desctop{
+                        display: none;
+                    }
+                }
+            }
+            .social{
+                .images{
+                    position: absolute;
+                    flex-direction: column;
+                    right: 20px;
+                    top: 20px;
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                        padding: 10px;
+                        border-radius: 20px;
+                        margin: 0;
+                        &.instagram{
+                            margin-top: 15px;
+                        }
+                    }
+                }
+                .pay{
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
 }
