@@ -50,12 +50,12 @@
         let input = input_blok.querySelector('input')
 
         btn.addEventListener('mouseover', (e)=>{
-            btn.querySelector('svg').querySelector('use').href.baseVal = '../sprite.svg#hide_password'
+            btn.querySelector('svg').querySelector('use').href.baseVal = './sprite.svg#hide_password'
             input.type = 'text'
         })
 
         btn.addEventListener('mouseout', (e)=>{
-            btn.querySelector('svg').querySelector('use').href.baseVal = '../sprite.svg#show_password'
+            btn.querySelector('svg').querySelector('use').href.baseVal = './sprite.svg#show_password'
             input.type = 'password'
         })
 
