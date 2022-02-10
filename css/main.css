@@ -1,10 +1,10 @@
 @font-face {
-  font-family: raleway;
-  src: local("Raleway-Regular"), url("../fonts/Raleway-Regular.ttf");
+  font-family: "raleway";
+  src: url("../fonts/Raleway-Regular.woff");
 }
 @font-face {
-  font-family: open_sans;
-  src: local("OpenSans-Regular"), url("../fonts/OpenSans-Regular.ttf");
+  font-family: "open_sans";
+  src: url("../fonts/OpenSans-Regular.woff");
 }
 body {
   min-height: 100vh;
@@ -16,7 +16,7 @@ body {
 body, body * {
   margin: 0;
   padding: 0;
-  font-family: open_sans;
+  font-family: "open_sans", sans-serif;
 }
 body.hidden {
   overflow: hidden;
@@ -60,7 +60,7 @@ span.title {
 }
 
 h1, h2, .title, .subtitle, a {
-  font-family: raleway;
+  font-family: "raleway", sans-serif;
 }
 
 p {
@@ -265,11 +265,18 @@ header nav.desctop_nav a:hover {
     width: calc(100vw - 40px);
   }
 }
+@media (max-width: 350px) {
+  .become_partner {
+    padding: 10px;
+    width: calc(100vw - 20px);
+  }
+}
 .become_partner p {
   margin: 30px 0;
 }
 .become_partner img {
   width: 30vw;
+  margin-left: 25px;
 }
 
 @media (max-width: 1100px) {
@@ -278,6 +285,7 @@ header nav.desctop_nav a:hover {
   }
   .become_partner img {
     width: 45vw;
+    margin-left: 0;
   }
 }
 @media (max-width: 700px) {
@@ -309,6 +317,12 @@ header nav.desctop_nav a:hover {
     width: calc(100vw - 40px);
   }
 }
+@media (max-width: 350px) {
+  .about_company {
+    padding: 10px;
+    width: calc(100vw - 20px);
+  }
+}
 .about_company .title {
   margin-top: 30px;
 }
@@ -331,6 +345,7 @@ header nav.desctop_nav a:hover {
   position: relative;
   margin: 20px 0;
   padding-left: 75px;
+  width: calc(100% - 75px);
 }
 .about_company .about_company_item .list_blok .list_item .text {
   width: 100%;
@@ -432,6 +447,7 @@ header nav.desctop_nav a:hover {
   }
   .about_company .about_company_item .list_blok .list_item {
     padding-left: 0px;
+    width: 100%;
     flex-direction: row;
     align-items: flex-start;
     text-align: start;
@@ -489,6 +505,12 @@ header nav.desctop_nav a:hover {
   .price_blok {
     padding: 20px;
     width: calc(100vw - 40px);
+  }
+}
+@media (max-width: 350px) {
+  .price_blok {
+    padding: 10px;
+    width: calc(100vw - 20px);
   }
 }
 .price_blok span.title {
@@ -625,6 +647,12 @@ header nav.desctop_nav a:hover {
     width: calc(100vw - 40px);
   }
 }
+@media (max-width: 350px) {
+  .favorable_conditions {
+    padding: 10px;
+    width: calc(100vw - 20px);
+  }
+}
 .favorable_conditions .content .list_blok .list_item {
   margin: 10px 0;
 }
@@ -673,6 +701,7 @@ header nav.desctop_nav a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-left: 20px;
 }
 .favorable_conditions .content .gift_blok h3.subtitle {
   width: 100%;
@@ -732,6 +761,10 @@ header nav.desctop_nav a:hover {
     height: 80px;
     right: 20px;
   }
+  .favorable_conditions .content .list_item .text p, .favorable_conditions .content .list_item .text b {
+    font-size: 10px;
+    padding: 5px 2px;
+  }
 }
 @media (max-width: 400px) {
   .favorable_conditions .content .gift_blok img {
@@ -757,6 +790,12 @@ header nav.desctop_nav a:hover {
   .join_tour_cloud {
     padding: 20px;
     width: calc(100vw - 40px);
+  }
+}
+@media (max-width: 350px) {
+  .join_tour_cloud {
+    padding: 10px;
+    width: calc(100vw - 20px);
   }
 }
 .join_tour_cloud .title_blok {
@@ -787,10 +826,11 @@ header nav.desctop_nav a:hover {
   margin: 10px 0;
   font-size: 14px;
   font-weight: 400;
-  border: 1px solid #DBD7D7;
+  border: none;
+  outline: 1px solid #DBD7D7;
 }
 .join_tour_cloud .content form input:focus {
-  border: 2px solid #009DDC;
+  outline: 2px solid #009DDC;
 }
 .join_tour_cloud .content form .conditions_check {
   position: relative;
@@ -807,6 +847,7 @@ header nav.desctop_nav a:hover {
   height: 20px;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 .join_tour_cloud .content form button {
   margin-top: 10px;
@@ -997,7 +1038,6 @@ footer .white_blok {
 .about_text_blok {
   text-align: start;
   margin: 0 100px;
-  margin-top: 30px;
 }
 .about_text_blok p {
   line-height: 250%;
@@ -1090,13 +1130,18 @@ footer .white_blok {
 }
 
 @media (max-width: 1024px) {
-  .mobile_nav_btn {
+  .mobile_nav_btn_blok {
     flex: 4;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    height: 100%;
+  }
+  .mobile_nav_btn_blok .mobile_nav_btn {
+    display: block;
     color: white;
+    padding: 0 10px;
     font-size: 26px;
     font-weight: 700;
     background: rgba(255, 255, 255, 0);
@@ -1105,8 +1150,7 @@ footer .white_blok {
     opacity: 1;
     transition: 0.3s;
   }
-
-  .mobile_nav_btn.active {
+  .mobile_nav_btn_blok .mobile_nav_btn.active {
     opacity: 0;
   }
 

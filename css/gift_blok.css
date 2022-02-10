@@ -18,6 +18,12 @@
     width: calc(100vw - 40px);
   }
 }
+@media (max-width: 350px) {
+  .favorable_conditions {
+    padding: 10px;
+    width: calc(100vw - 20px);
+  }
+}
 .favorable_conditions .content .list_blok .list_item {
   margin: 10px 0;
 }
@@ -66,6 +72,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-left: 20px;
 }
 .favorable_conditions .content .gift_blok h3.subtitle {
   width: 100%;
@@ -124,6 +131,10 @@
     width: 80px;
     height: 80px;
     right: 20px;
+  }
+  .favorable_conditions .content .list_item .text p, .favorable_conditions .content .list_item .text b {
+    font-size: 10px;
+    padding: 5px 2px;
   }
 }
 @media (max-width: 400px) {

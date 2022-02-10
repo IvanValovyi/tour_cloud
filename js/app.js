@@ -14,7 +14,9 @@ headers.innerHTML = `
     <a href='./contacts.html'>CONTACTS</a>
 </nav>
 
+<section class='mobile_nav_btn_blok'>
 <button class='mobile_nav_btn'>=</button>
+</section>
 
 <nav class='mobile_nav'>
     <a href='#' class='login'>

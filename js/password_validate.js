@@ -61,7 +61,7 @@
 
     }
 
-    let all_password_blok = document.querySelectorAll('#password_blok')
+    let all_password_blok = document.querySelectorAll(".input_blok.password")
 
     all_password_blok.forEach(blok=>{
         show_password(blok)

@@ -18,6 +18,12 @@
     width: calc(100vw - 40px);
   }
 }
+@media (max-width: 350px) {
+  .join_tour_cloud {
+    padding: 10px;
+    width: calc(100vw - 20px);
+  }
+}
 .join_tour_cloud .title_blok {
   position: relative;
   padding-bottom: 30px;
@@ -46,10 +52,11 @@
   margin: 10px 0;
   font-size: 14px;
   font-weight: 400;
-  border: 1px solid #DBD7D7;
+  border: none;
+  outline: 1px solid #DBD7D7;
 }
 .join_tour_cloud .content form input:focus {
-  border: 2px solid #009DDC;
+  outline: 2px solid #009DDC;
 }
 .join_tour_cloud .content form .conditions_check {
   position: relative;
@@ -66,6 +73,7 @@
   height: 20px;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 .join_tour_cloud .content form button {
   margin-top: 10px;

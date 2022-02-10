@@ -1,17 +1,53 @@
-/* Error: Undefined mixin.
- *   ,
- * 2 |     @include article_blok();
- *   |     ^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss\become_partner.scss 2:5  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502      @include article_blok();\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\become_partner.scss 2:5  root stylesheet";
+.become_partner {
+  padding: 30px 250px;
+  background: linear-gradient(94.35deg, #009DDC 17.13%, #008AC2 82.87%);
+  color: white;
+  border-radius: 0 0 5px 5px;
 }
+@media (max-width: 1800px) {
+  .become_partner {
+    padding: 30px 100px;
+  }
+}
+@media (max-width: 1250px) {
+  .become_partner {
+    padding: 30px;
+    width: calc(100vw - 60px);
+  }
+}
+@media (max-width: 750px) {
+  .become_partner {
+    padding: 20px;
+    width: calc(100vw - 40px);
+  }
+}
+@media (max-width: 350px) {
+  .become_partner {
+    padding: 10px;
+    width: calc(100vw - 20px);
+  }
+}
+.become_partner p {
+  margin: 30px 0;
+}
+.become_partner img {
+  width: 30vw;
+  margin-left: 25px;
+}
+
+@media (max-width: 1100px) {
+  .become_partner .text_blok {
+    margin-bottom: 20px;
+  }
+  .become_partner img {
+    width: 45vw;
+    margin-left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .become_partner img {
+    width: calc(100vw - 60px);
+  }
+}
+
+/*# sourceMappingURL=become_partner.css.map */

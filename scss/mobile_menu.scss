@@ -5,20 +5,25 @@
 }
 
 @media (max-width:1024px) {
-    .mobile_nav_btn{
+    .mobile_nav_btn_blok{
         flex: 4;
         @include flex(center, center);
-        color: white;
-        font-size: 26px;
-        font-weight: 700;
-        background: rgba(255, 255, 255, 0);
-        border: none;
-        outline: none;
-        opacity: 1;
-        transition: 0.3s;
-    }
-    .mobile_nav_btn.active{
-        opacity: 0;
+        height: 100%;
+        .mobile_nav_btn{
+            display: block;
+            color: white;
+            padding: 0 10px;
+            font-size: 26px;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0);
+            border: none;
+            outline: none;
+            opacity: 1;
+            transition: 0.3s;
+            &.active{
+                opacity: 0;
+            }
+        }
     }
     .mobile_nav{
         position: absolute;

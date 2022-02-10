@@ -47,6 +47,7 @@
             background: #009DDC;
             color: white;
             @include flex(center, center, column);
+            margin-left: 20px;
             h3.subtitle{
                 width: 100%;
                 text-align: start;
@@ -110,13 +111,21 @@
 }
 
 @media (max-width: 500px) {
-    .favorable_conditions .content .gift_blok{
-        padding: 20px 10px;
-                img{
-                    width: 80px;
-                    height: 80px;
-                    right: 20px;
-                }
+    .favorable_conditions .content {
+        .gift_blok{
+            padding: 20px 10px;
+            img{
+                width: 80px;
+                height: 80px;
+                right: 20px;
+            }
+        }
+        .list_item .text{
+            p, b{
+                font-size: 10px;
+                padding: 5px 2px;
+            }
+        }
     }
 }
 

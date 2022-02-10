@@ -1,10 +1,10 @@
 @font-face {
-  font-family: raleway;
-  src: local("Raleway-Regular"), url("../fonts/Raleway-Regular.ttf");
+  font-family: "raleway";
+  src: url("../fonts/Raleway-Regular.woff");
 }
 @font-face {
-  font-family: open_sans;
-  src: local("OpenSans-Regular"), url("../fonts/OpenSans-Regular.ttf");
+  font-family: "open_sans";
+  src: url("../fonts/OpenSans-Regular.woff");
 }
 
 /*# sourceMappingURL=fonts.css.map */

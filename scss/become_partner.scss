@@ -1,3 +1,5 @@
+@import './mixin.scss';
+
 .become_partner{
     @include article_blok();
     background: linear-gradient(94.35deg, #009DDC 17.13%, #008AC2 82.87%);
@@ -8,6 +10,7 @@
     }
     img{
         width: 30vw;
+        margin-left: 25px;
     }
 }
 
@@ -18,6 +21,7 @@
         }
         img{
             width: 45vw;
+            margin-left: 0;
         }
     }
 }
